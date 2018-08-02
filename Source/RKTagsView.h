@@ -5,9 +5,9 @@ NS_ASSUME_NONNULL_BEGIN
 UIKIT_EXTERN const CGFloat RKTagsViewAutomaticDimension; // use sizeToFit
 
 typedef NS_ENUM(NSInteger, RKTagsViewTextFieldAlign) { // align is relative to a last tag
-  RKTagsViewTextFieldAlignTop,
-  RKTagsViewTextFieldAlignCenter,
-  RKTagsViewTextFieldAlignBottom,
+    RKTagsViewTextFieldAlignTop,
+    RKTagsViewTextFieldAlignCenter,
+    RKTagsViewTextFieldAlignBottom,
 };
 
 @class RKTagsView;
@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, RKTagsViewTextFieldAlign) { // align is relative to a
 IB_DESIGNABLE
 @interface RKTagsView: UIView
 
+@property (nonatomic) BOOL oneLineMode;
+@property (strong, nonatomic) UIButton *moreButton;
 @property (nonatomic, strong, readonly) UIScrollView *scrollView; // scrollView delegate is not used
 @property (nonatomic, strong, readonly) UITextField *textField; // textfield delegate is not used
 @property (nonatomic, copy, readonly) NSArray<NSString *> *tags;
