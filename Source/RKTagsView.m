@@ -148,7 +148,6 @@ const CGFloat RKTagsViewAutomaticDimension = -0.0001;
                                                    self.moreButton.frame.size.width, previousButtonFrame.size.height);
 
                 self.moreButton.hidden = NO;
-                self.moreButton.backgroundColor = [UIColor redColor];
                 
                 for (UIButton *prevButton in processedButtons.reverseObjectEnumerator) {
                     if (contentWidth - spaceUsed < self.moreButton.frame.size.width + self.interitemSpacing) {
